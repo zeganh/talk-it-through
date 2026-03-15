@@ -10,14 +10,13 @@
 
 <meta name="description" content="Clarity conversations designed to help you untangle your thinking, gain perspective and move forward with confidence.">
 
-<link rel="icon" href="logo.png">
-
 <style>
 
 /* GLOBAL */
 
 html{
 scroll-behavior:smooth;
+scroll-padding-top:90px;
 }
 
 body{
@@ -45,12 +44,13 @@ margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:10px 20px;
+padding:12px 20px;
 }
 
-.nav-logo img{
-height:200px;
-width:auto;
+.logo{
+font-weight:700;
+font-size:20px;
+color:#333;
 }
 
 .nav-links a{
@@ -72,7 +72,7 @@ background:
 linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
 url("hero.jpg");
 background-size:cover;
-background-position:center 30%;
+background-position:center 35%;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -82,8 +82,8 @@ margin-top:70px;
 }
 
 .hero-overlay{
-max-width:750px;
-padding:40px;
+padding:60px;
+border-radius:12px;
 }
 
 .hero h1{
@@ -94,14 +94,6 @@ margin-bottom:10px;
 .hero p{
 font-size:22px;
 margin-bottom:30px;
-}
-
-/* TESTIMONIAL STARS */
-
-.stars{
-color:#f5b301;
-font-size:20px;
-margin-bottom:10px;
 }
 
 /* BUTTON */
@@ -115,7 +107,6 @@ text-decoration:none;
 border-radius:10px;
 font-weight:bold;
 font-size:18px;
-letter-spacing:0.5px;
 transition:0.3s;
 box-shadow:0 6px 20px rgba(0,0,0,0.2);
 }
@@ -123,22 +114,6 @@ box-shadow:0 6px 20px rgba(0,0,0,0.2);
 .button:hover{
 background:#e85c2a;
 transform:translateY(-3px);
-}
-
-/* PULSE CTA */
-
-@keyframes pulse{
-
-0%{box-shadow:0 0 0 0 rgba(255,107,53,0.7);}
-
-70%{box-shadow:0 0 0 12px rgba(255,107,53,0);}
-
-100%{box-shadow:0 0 0 0 rgba(255,107,53,0);}
-
-}
-
-.book-highlight{
-animation:pulse 2.5s infinite;
 }
 
 /* CONTAINER */
@@ -232,7 +207,13 @@ border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* CTA STRONG */
+.stars{
+color:#f5b301;
+font-size:20px;
+margin-bottom:10px;
+}
+
+/* CTA */
 
 .cta-strong{
 background:#2f80ed;
@@ -245,7 +226,7 @@ text-align:center;
 font-size:36px;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 
 .whatsapp-float{
 position:fixed;
@@ -266,8 +247,14 @@ box-shadow:0 8px 20px rgba(0,0,0,0.2);
 background:#1f1f1f;
 color:#ddd;
 text-align:center;
-padding:50px 20px;
+padding:60px 20px;
 margin-top:80px;
+}
+
+.footer-logo{
+width:200px;
+margin-bottom:20px;
+opacity:0.9;
 }
 
 .footer-divider{
@@ -320,7 +307,7 @@ grid-template-columns:1fr;
 
 </head>
 
-<body id="top">
+<body>
 
 <!-- NAVBAR -->
 
@@ -328,10 +315,8 @@ grid-template-columns:1fr;
 
 <div class="nav-container">
 
-<div class="nav-logo">
-<a href="#top">
-<img src="logo.png" alt="Talk It Through Logo">
-</a>
+<div class="logo">
+Talk It Through
 </div>
 
 <div class="nav-links">
@@ -340,8 +325,7 @@ grid-template-columns:1fr;
 <a href="#features">How It Helps</a>
 <a href="#who">Who It's For</a>
 <a href="#pricing">Pricing</a>
-
-<a class="button book-highlight" href="#book">Book</a>
+<a href="#book">Book</a>
 
 </div>
 
@@ -355,10 +339,11 @@ grid-template-columns:1fr;
 
 <div class="hero-overlay">
 
-<h1>Gain Clarity When Life Feels Overwhelming</h1>
-<p>A structured conversation to untangle your thinking and help you move forward.</p>
+<h1>Talk It Through</h1>
 
-<a class="button book-highlight" href="#book">Book a Conversation</a>
+<p>Your Space. Your Clarity.</p>
+
+<a class="button" href="#book">Book a Conversation</a>
 
 </div>
 
@@ -463,44 +448,31 @@ These sessions help you explore your thoughts and find clarity through structure
 
 </section>
 
+<!-- TESTIMONIALS -->
+
 <section class="container reveal">
 
 <h2 style="text-align:center;margin-bottom:40px;">What People Are Saying</h2>
 
 <div class="testimonial">
-
 <div class="stars">★★★★★</div>
-
 “Talking things through helped me gain clarity I couldn't see on my own.”
-
 <br><br>
-
 <strong>— Chantal B.</strong>
-
 </div>
 
 <div class="testimonial">
-
 <div class="stars">★★★★★</div>
-
 “A relaxed conversation that helped me understand my thinking patterns.”
-
 <br><br>
-
 <strong>— Kevin M.</strong>
-
 </div>
 
 <div class="testimonial">
-
 <div class="stars">★★★★★</div>
-
 “I walked away with clarity and a clear next step.”
-
 <br><br>
-
 <strong>— Michael H.</strong>
-
 </div>
 
 </section>
@@ -509,13 +481,13 @@ These sessions help you explore your thoughts and find clarity through structure
 
 <section class="cta-strong">
 
-<h2>Ready To Gain Clarity?</h2>
+<h2>Ready To Talk It Through?</h2>
 
-<p>Book a session and start gaining perspective.</p>
+<p>Book a session and start gaining clarity.</p>
 
 <br>
 
-<a class="button book-highlight"
+<a class="button"
 href="https://calendly.com/zeganh/30min"
 target="_blank">
 
@@ -563,6 +535,8 @@ WhatsApp
 
 <footer class="site-footer">
 
+<img src="logo.png" class="footer-logo">
+
 <div class="footer-divider"></div>
 
 <p><strong>Talk It Through</strong></p>
@@ -578,6 +552,7 @@ Coaching approach informed by Neuro Life Coaching training.
 <script>
 
 function reveal(){
+
 var reveals=document.querySelectorAll(".reveal");
 
 for(var i=0;i<reveals.length;i++){
@@ -587,10 +562,13 @@ var elementTop=reveals[i].getBoundingClientRect().top;
 var elementVisible=120;
 
 if(elementTop<windowHeight-elementVisible){
+
 reveals[i].classList.add("active");
+
 }
 
 }
+
 }
 
 window.addEventListener("scroll",reveal);
@@ -598,4 +576,5 @@ window.addEventListener("scroll",reveal);
 </script>
 
 </body>
-</html>
+
+</html></html>
