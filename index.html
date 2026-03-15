@@ -11,7 +11,7 @@
 <style>
 
 body{
-font-family: 'Segoe UI', sans-serif;
+font-family:'Segoe UI',sans-serif;
 margin:0;
 background:#f4f7f8;
 color:#333;
@@ -39,7 +39,7 @@ border-radius:10px;
 }
 
 .hero h1{
-font-size:56px;
+font-size:52px;
 margin:0;
 }
 
@@ -56,33 +56,103 @@ margin:auto;
 padding:60px 20px;
 }
 
-/* SECTIONS */
+/* FLEX SECTION */
 
-.section{
-margin-bottom:70px;
+.flex-section{
+display:flex;
+gap:40px;
+align-items:center;
+margin-bottom:80px;
 }
 
-.section img{
+.flex-text{
+flex:1;
+}
+
+.flex-image{
+flex:1;
+}
+
+.flex-image img{
 width:100%;
+max-width:380px;
 border-radius:12px;
-margin-top:25px;
 box-shadow:0 8px 25px rgba(0,0,0,0.1);
 }
 
-.section h2{
-font-size:32px;
-margin-bottom:15px;
+/* CENTER IMAGE */
+
+.center-image{
+display:block;
+width:40%;
+max-width:320px;
+margin:40px auto;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
 }
 
-/* CTA */
+/* WHO SECTION */
 
-.cta{
+.who{
+margin:80px 0;
+}
+
+.who-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:30px;
+}
+
+.who-item{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* ABOUT */
+
+.about{
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+margin-bottom:60px;
+}
+
+/* PRICING */
+
+.pricing{
 background:white;
 padding:40px;
 border-radius:12px;
 text-align:center;
 box-shadow:0 8px 25px rgba(0,0,0,0.08);
+margin-bottom:60px;
 }
+
+.price{
+font-size:42px;
+font-weight:bold;
+margin:10px 0;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+margin-bottom:60px;
+}
+
+.testimonial{
+background:white;
+padding:25px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* BUTTONS */
 
 .button{
 display:inline-block;
@@ -102,15 +172,59 @@ background:#1b5fc1;
 transform:translateY(-2px);
 }
 
+/* CTA */
+
+.cta{
+background:white;
+padding:40px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:16px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
 /* FOOTER */
 
 footer{
-margin-top:60px;
+margin-top:80px;
 background:#222;
 color:white;
 text-align:center;
 padding:30px;
 font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.flex-section{
+flex-direction:column;
+text-align:center;
+}
+
+.center-image{
+width:70%;
+}
+
+.who-grid{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
@@ -137,40 +251,107 @@ font-size:14px;
 
 <!-- SECTION 1 -->
 
-<div class="section">
+<div class="flex-section">
+
+<div class="flex-text">
 
 <h2>Sometimes You Just Need To Talk It Through</h2>
 
 <p>
 Life can feel overwhelming. Sometimes we just need a space to talk things through,
-untangle our thoughts, and make sense of what's really going on.
+untangle our thoughts and make sense of what’s really going on.
 </p>
 
 <p>
-These sessions are relaxed conversations designed to help you explore
-your thoughts, patterns and options using practical coaching and NLP techniques.
+These sessions are relaxed conversations designed to help you explore your thinking,
+patterns and options using practical coaching and NLP techniques.
 </p>
+
+</div>
+
+<div class="flex-image">
 
 <img src="conversation.jpg">
 
 </div>
 
-<!-- SECTION 2 -->
+</div>
 
-<div class="section">
+<!-- CLARITY -->
 
-<h2>Find Your Clarity</h2>
+<h2 style="text-align:center;">Find Your Clarity</h2>
+
+<p style="text-align:center; max-width:700px; margin:auto;">
+Through conversation and guided questions we unpack what’s happening beneath the surface.
+The goal isn't advice — it's helping you discover your own answers and move forward with confidence.
+</p>
+
+<img src="clarity.jpg" class="center-image">
+
+<!-- WHO THIS IS FOR -->
+
+<div class="who">
+
+<h2 style="text-align:center;">Who This Is For</h2>
+
+<div class="who-grid">
+
+<div class="who-item">Feeling stuck and unsure what your next step should be.</div>
+<div class="who-item">Overthinking situations and needing clarity.</div>
+<div class="who-item">Navigating work, relationships or life transitions.</div>
+<div class="who-item">Wanting a neutral space to talk things through.</div>
+<div class="who-item">Trying to understand your patterns and reactions.</div>
+<div class="who-item">Simply needing someone to talk things through with.</div>
+
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
+<div class="about">
+
+<h2>About Talk It Through</h2>
 
 <p>
-Through conversation and guided questions, we unpack what's happening beneath the surface.
+Talk It Through is built around a simple idea — sometimes the most powerful thing
+we can do is slow down and explore what’s really going on in our thinking.
 </p>
 
 <p>
-The goal isn't to give advice — it's to help you discover your own answers
-and move forward with confidence.
+These conversations are not therapy. They are guided discussions designed to help
+you reflect, explore patterns and find clarity using practical coaching and Neuro Linguistic Programming techniques.
 </p>
 
-<img src="clarity.jpg">
+</div>
+
+<!-- PRICING -->
+
+<div class="pricing">
+
+<h2>Session Investment</h2>
+
+<p class="price">R750</p>
+
+<p>45–60 minute coaching conversation</p>
+
+<p>Virtual or in person</p>
+
+</div>
+
+<!-- TESTIMONIALS -->
+
+<div class="testimonials">
+
+<h2>What People Say</h2>
+
+<div class="testimonial">
+<p>"Talking things through helped me gain clarity I couldn't see on my own."</p>
+</div>
+
+<div class="testimonial">
+<p>"A relaxed conversation that helped me understand my thinking patterns."</p>
+</div>
 
 </div>
 
@@ -180,20 +361,43 @@ and move forward with confidence.
 
 <h2>Book a Conversation</h2>
 
-<p>45–60 minute sessions<br>Virtual or in person</p>
+<p>Choose a time that works for you.</p>
 
-<a class="button" href="https://wa.me/27826774491?text=Hi%20I%20would%20like%20to%20book%20a%20Talk%20It%20Through%20session">
+<a class="button"
+href="https://calendly.com/zeganh/30min"
+target="_blank">
+
+Book a Session
+
+</a>
+
+<a class="button"
+href="https://docs.google.com/forms/d/e/1FAIpQLSeiElnRdXBH5P2X-Pf6poColoU--0ExcErcTio5w010pw6GPw/viewform"
+target="_blank">
+
+Session Intake Form
+
+</a>
+
+<a class="button"
+href="https://wa.me/27826774491?text=Hi%20I%20saw%20your%20Talk%20It%20Through%20page%20and%20would%20like%20to%20book%20a%20session">
+
 Chat on WhatsApp
-</a>
 
-
-<a class="button" href="mailto:zeganh@gmail.com">
-Send Email
 </a>
 
 </div>
 
 </div>
+
+<!-- FLOATING WHATSAPP -->
+
+<a class="whatsapp-float"
+href="https://wa.me/27826774491?text=Hi%20I%20saw%20your%20Talk%20It%20Through%20page%20and%20would%20like%20to%20book%20a%20session">
+
+WhatsApp
+
+</a>
 
 <footer>
 
