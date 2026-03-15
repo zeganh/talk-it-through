@@ -10,6 +10,8 @@
 
 <meta name="description" content="Clarity conversations designed to help you untangle your thinking, gain perspective and move forward with confidence.">
 
+<link rel="icon" href="logo.png">
+
 <style>
 
 /* GLOBAL */
@@ -43,12 +45,12 @@ margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 20px;
+padding:10px 20px;
 }
 
-.logo{
-font-weight:bold;
-font-size:20px;
+.nav-logo img{
+height:200px;
+width:auto;
 }
 
 .nav-links a{
@@ -65,8 +67,10 @@ color:#2f80ed;
 /* HERO */
 
 .hero{
-height:600px;
-background-image:url("hero.jpg");
+height:650px;
+background:
+linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+url("hero.jpg");
 background-size:cover;
 background-position:center;
 display:flex;
@@ -78,9 +82,8 @@ margin-top:70px;
 }
 
 .hero-overlay{
-background:rgba(0,0,0,0.55);
-padding:60px;
-border-radius:12px;
+max-width:750px;
+padding:40px;
 }
 
 .hero h1{
@@ -93,22 +96,49 @@ font-size:22px;
 margin-bottom:30px;
 }
 
+/* TESTIMONIAL STARS */
+
+.stars{
+color:#f5b301;
+font-size:20px;
+margin-bottom:10px;
+}
+
 /* BUTTON */
 
 .button{
 display:inline-block;
-padding:16px 28px;
-background:#2f80ed;
+padding:18px 34px;
+background:#ff6b35;
 color:white;
 text-decoration:none;
-border-radius:8px;
+border-radius:10px;
 font-weight:bold;
+font-size:18px;
+letter-spacing:0.5px;
 transition:0.3s;
+box-shadow:0 6px 20px rgba(0,0,0,0.2);
 }
 
 .button:hover{
-background:#1b5fc1;
-transform:translateY(-2px);
+background:#e85c2a;
+transform:translateY(-3px);
+}
+
+/* PULSE CTA */
+
+@keyframes pulse{
+
+0%{box-shadow:0 0 0 0 rgba(255,107,53,0.7);}
+
+70%{box-shadow:0 0 0 12px rgba(255,107,53,0);}
+
+100%{box-shadow:0 0 0 0 rgba(255,107,53,0);}
+
+}
+
+.book-highlight{
+animation:pulse 2.5s infinite;
 }
 
 /* CONTAINER */
@@ -290,7 +320,7 @@ grid-template-columns:1fr;
 
 </head>
 
-<body>
+<body id="top">
 
 <!-- NAVBAR -->
 
@@ -298,7 +328,11 @@ grid-template-columns:1fr;
 
 <div class="nav-container">
 
-<div class="logo">Talk It Through</div>
+<div class="nav-logo">
+<a href="#top">
+<img src="logo.png" alt="Talk It Through Logo">
+</a>
+</div>
 
 <div class="nav-links">
 
@@ -306,7 +340,8 @@ grid-template-columns:1fr;
 <a href="#features">How It Helps</a>
 <a href="#who">Who It's For</a>
 <a href="#pricing">Pricing</a>
-<a href="#book">Book</a>
+
+<a class="button book-highlight" href="#book">Book</a>
 
 </div>
 
@@ -320,11 +355,10 @@ grid-template-columns:1fr;
 
 <div class="hero-overlay">
 
-<h1>Talk It Through</h1>
+<h1>Gain Clarity When Life Feels Overwhelming</h1>
+<p>A structured conversation to untangle your thinking and help you move forward.</p>
 
-<p>Your Space. Your Clarity.</p>
-
-<a class="button" href="#book">Book a Conversation</a>
+<a class="button book-highlight" href="#book">Book a Conversation</a>
 
 </div>
 
@@ -413,7 +447,7 @@ These sessions help you explore your thoughts and find clarity through structure
 
 <!-- PRICING -->
 
-<section id="pricing" class="reveal">
+<section id="pricing" class="reveal" style="margin-top:80px;">
 
 <div class="card">
 
@@ -429,27 +463,59 @@ These sessions help you explore your thoughts and find clarity through structure
 
 </section>
 
-<div class="testimonial reveal">
-Talking things through helped me gain clarity I couldn't see on my own.
+<section class="container reveal">
+
+<h2 style="text-align:center;margin-bottom:40px;">What People Are Saying</h2>
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+“Talking things through helped me gain clarity I couldn't see on my own.”
+
+<br><br>
+
+<strong>— Chantal B.</strong>
+
 </div>
 
-<div class="testimonial reveal">
-A relaxed conversation that helped me understand my thinking patterns.
-</div>
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+“A relaxed conversation that helped me understand my thinking patterns.”
+
+<br><br>
+
+<strong>— Kevin M.</strong>
 
 </div>
+
+<div class="testimonial">
+
+<div class="stars">★★★★★</div>
+
+“I walked away with clarity and a clear next step.”
+
+<br><br>
+
+<strong>— Michael H.</strong>
+
+</div>
+
+</section>
 
 <!-- CTA -->
 
 <section class="cta-strong">
 
-<h2>Ready To Talk It Through?</h2>
+<h2>Ready To Gain Clarity?</h2>
 
-<p>Book a session and start gaining clarity.</p>
+<p>Book a session and start gaining perspective.</p>
 
 <br>
 
-<a class="button"
+<a class="button book-highlight"
 href="https://calendly.com/zeganh/30min"
 target="_blank">
 
@@ -532,6 +598,4 @@ window.addEventListener("scroll",reveal);
 </script>
 
 </body>
-
 </html>
-
